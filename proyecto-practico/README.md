@@ -1,8 +1,23 @@
-# React + Vite
+# Rocio Beatriz Ortiz Garcia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Technical Test
 
-Currently, two official plugins are available:
+## Documentation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Init project and run - proyecto-practico
+
+* Download Project
+* on terminal
+    * __cd to proyecto-practico__
+    * __yarn__
+    * __yarn dev__
+With this the project will be running at http://localhost:5173
+
+### Test - html-css-js
+
+* Just open the indes.html on the browser
+
+### Test - problema-logica
+
+* on terminal enter to the folder problema-logica
+* type node index.js and hit enter
