@@ -1,0 +1,87 @@
+@import '../mixins.scss';
+@import "../variables.scss";
+
+.experience{
+    h2{
+        @include font-style( 2.2rem, 400, 1rem, $primaryColor);
+        text-align: center;
+        margin: 70px auto;
+    }
+    &__data{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        i{
+            margin-right: 15px;
+            color: $accentColour;
+        }
+        h3{
+            @include font-style( 1.4rem, 600, 1rem, $primaryColor);
+            margin: 0 15px 0 0;
+        }
+        strong{
+            @include font-style( 1.4rem, 400, 1rem, $accentColour);
+        }
+    }
+    &__description,
+    &__date{
+        margin: 10px 0 0;
+        padding-left: 35px;
+    }
+    ul{
+        li{
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            @include border(1px, rgba(0,0,0,.2), 'bottom')
+        }
+    }
+    button{
+        display: flex;
+        width: fit-content;
+        margin: 50px auto;
+        align-items: center;
+        padding: 10px 25px;
+        @include border(1px, $secondary, false, 8px);
+        transition: all .2s;
+        cursor: pointer;
+        span{
+            @include font-style( 1.2rem, 400, 1rem, $primaryColor);
+            margin-right: 15px;
+            transition: all .2s;
+        }
+        i{
+            color: $secondary;
+            transition: all .2s;
+        }
+        &:hover{
+            transition: all .2s;
+            background: $primaryColor;
+            color: white;
+            span{
+                color: white;
+                transition: all .2s;
+            }
+            i{
+                color: white;
+                transition: all .2s;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .experience{
+        &__data{
+            display: grid;
+            grid-template-columns: 35px auto;
+            h3{
+                @include font-style( 1.4rem, 600, 1.6rem, $primaryColor);
+            }
+            strong{
+                @include font-style( 1.4rem, 400, 1rem, $accentColour);
+                grid-column: 1 / span 2;
+                padding-left: 35px;
+                margin: 5px 0 10px;
+            }
+        }
+    }
+}

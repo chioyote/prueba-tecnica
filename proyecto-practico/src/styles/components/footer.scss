@@ -1,0 +1,9 @@
+@import '../mixins.scss';
+@import "../variables.scss";
+
+footer{
+    padding: 20px 0;
+    text-align: center;
+    background: $primaryColor;
+    @include font-style( .9rem, 400, 1rem, $accentColour);
+}

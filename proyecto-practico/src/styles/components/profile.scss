@@ -1,0 +1,69 @@
+@import "../variables.scss";
+@import '../mixins.scss';
+
+.profile{
+    background: rgba($primaryColor,.05);
+    padding: 60px 0;
+    &__wrap{
+        max-width: 800px;
+        margin: 0 auto;
+        align-items: center;
+        width: 90%;
+    }
+    &__image{
+        overflow: hidden;
+        @include border(2px, $secondary, false, 50%)
+    }
+    h1{
+        @include font-style( 3.3rem, 600, 3.5rem, $secondary);
+        margin: 0 0 20px
+    }
+    ul{
+        display: flex;
+        align-items: center;
+        li{
+            &:first-child{
+                margin: 0 30px 0px 0;
+            }
+        }
+    }
+    p{
+        @include font-style( 1.4rem, 600, 1rem, $primaryColor);
+    }
+    a{
+        @include font-style( 1rem, 400, 1rem, $primaryColor);
+        text-decoration: none;
+    }
+}
+@media (max-width: 768px) {
+    .profile{
+        &__wrap{
+            text-align: center;
+        }
+        &__image{
+            margin: 30px auto;
+            max-width: 250px;
+        }
+        ul{
+            display: block;
+            li{
+                margin: 0;
+                &:first-child{
+                    margin: 0 0 15px;
+                }
+            }
+        }
+        a{
+            @include font-style( 1.2rem, 400, 1rem, $primaryColor);
+        }
+    }
+}
+@media (min-width: 769px) {
+    .profile{
+        &__wrap{
+            display: grid;
+            grid-template-columns: 300px auto;
+            grid-gap: 50px;
+        }
+    }
+}
